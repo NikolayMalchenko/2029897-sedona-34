@@ -238,6 +238,10 @@
       <div class="modal modal-auth">
         <!-- кнопка закрыть -->
         <button class="modal-close-button">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 1.2L11.8 0L6.5 5.3L1.2 0L0 1.2L5.3 6.5L0 11.8L1.2 13L6.5 7.7L11.8 13L13 11.8L7.7 6.5L13 1.2Z" fill="currentColor"/>
+            </svg>
+
           <span class="visually-hidden">Закрыть</span>
         </button>
         <!-- контент -->
@@ -247,32 +251,63 @@
           <!-- форма -->
           <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
             <div class="date">
-              <label class="arrival-date">
-                Дата заезда:<input class="arrival-date-input" type="date" id="arrival" name="arrival"
-                  placeholder="27 апреля 2020">
-                <span class="span-arrival-date"> Мы не можем отправить вас в
-                  прошлое</span>
-              </label>
+              <label class="arrival-date date-field" for="arrival">Дата заезда:</label>
+              <input class="date-input" type="text" id="arrival" name="arrival" placeholder="27 апреля 2020">
+              <span class="date-confirm date-confirm-error"> Мы не можем отправить вас в прошлое</span>
             </div>
 
             <div class="date">
-              <label class="departure-date">
-                Дата выезда:<input class="departure-date-input" type="date" id="departure" name="departure"
-                  placeholder="27 апреля 2020"> <span class="span-departure-date"> На эти даты есть свободные номера.
-                  Пока есть.</span>
-              </label>
+              <label class="departure-date date-field" for="departure">Дата выезда:</label>
+              <input class="date-input" type="text" id="departure" name="departure" placeholder="01 сентября 2021">
+
+              <span class="date-confirm"> На эти даты есть свободные номера. Пока есть.</span>
             </div>
 
             <div class="people-children">
-              <label class="people">
-                Взрослые: <div><button class="btn-min" type="button">-</button><input class="people-input" type="number" id="people"
-                  name="people"><button class="btn-max" type="button">+</button></div>
-              </label>
+              <label class="people" for="people">Взрослые:</label>
+              <div class="quantity">
+                <button class="btn-min" type="button">
+                  <svg aria-hidden="true" focusable="false" width="13" height="1" viewBox="0 0 13 1" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="1.0" d="M0 0L0 1L13 1V0L0 0Z" fill="currentColor" />
+                  </svg>
+                </button>
+                <input class="quantity-input" type="number" id="people" name="people" min="0" placeholder="2">
+                <button class="btn-max" type="button">
+                  <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g opacity="1.0">
+                    <path d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z" fill="currentColor"/>
+                    </g>
+                    </svg>
+                </button>
+              </div>
 
-              <label class="children">
-                Дети: <div><button class="btn-min"  type="button">-</button><input class="children-input" type="number" id="children"
-                  name="children"><button class="btn-max" type="button">+</button></div>
-              </label>
+
+             <span class="form-label">
+              <label class="children" for="children"> Дети:</label>
+              <span class="tooltip"><button class="tooltip-toggle" aria-labelledby="tooltip-label"><svg class="tooltip-icon" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12.5" cy="12.5" r="12.5" fill="#currenColor"/>
+                </svg>
+                  </button>
+                <span class="tooltip-text" role="tooltip" id="tooltip-label">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+              </span>
+            </span>
+              <div class="quantity">
+                <button class="btn-min" type="button">
+                  <svg aria-hidden="true" focusable="false" width="13" height="1" viewBox="0 0 13 1" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="1.0" d="M0 0L0 1L13 1V0L0 0Z" fill="currentColor" />
+                  </svg>
+                </button>
+                <input class="quantity-input" type="number" id="children" name="children" min="0" placeholder="1">
+                <button class="btn-max" type="button">
+                  <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g opacity="1.0">
+                    <path d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z" fill="currentColor"/>
+                    </g>
+                    </svg>
+                </button>
+              </div>
             </div>
 
             <!-- кнопка найти -->
