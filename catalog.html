@@ -66,42 +66,54 @@
           <!-- ФОРМА ПОДБОРА ГОСТИНИЦЫ -->
           <form action="https://echo.htmlacademy.ru/" class="flex-form" method="get">
             <fieldset class="infrastructure">
-              <legend class="infrastructure-title">Инфроструктура:</legend>
+              <legend class="infrastructure-title">Инфраструктура:</legend>
               <ul class="infrastructure-list">
                 <li class="infrastructure-item">
                   <label class="control">
-                    <input class="control-input" type="checkbox" name="swimming-pool" checked>Бассейн
+                    <input class="visually-hidden control-input" type="checkbox" name="swimming-pool" checked>
+                    <span class="control-mark"></span>
+                    <span>Бассейн</span>
                   </label>
                 </li>
                 <li class="infrastructure-item">
                   <label class="control">
-                    <input class="control-input" type="checkbox" name="parking" checked>Парковка
+                    <input class="visually-hidden control-input" type="checkbox" name="parking" checked>
+                    <span class="control-mark"></span>
+                    <span>Парковка</span>
                   </label>
                 </li>
                 <li class="infrastructure-item">
                   <label class="control">
-                    <input class="control-input" type="checkbox" name="wi-fi">Wi-fi
+                    <input class="visually-hidden control-input" type="checkbox" name="wi-fi">
+                    <span class="control-mark"></span>
+                    <span>Wi-Fi</span>
                   </label>
                 </li>
               </ul>
             </fieldset>
 
             <fieldset class="type-of-housing">
-              <legend class="type-of-housing-title">Тип жилья:</legend>
+              <legend class="type-of-housing-title">Тип Жилья:</legend>
               <ul class="type-of-housing-list">
                 <li class="type-of-housing-item">
-                  <label class="control-group">
-                    <input class="control-radio" type="radio" name="housing-group" value="gostinica">Гостиница
+                  <label class="control">
+                    <input class="visually-hidden control-input" type="radio" name="housing-group" value="gostinica">
+                    <span class="control-mark"></span>
+                    <span>Гостиница</span>
                   </label>
                 </li>
                 <li class="type-of-housing-item">
                   <label class="control">
-                    <input class="control-radio" type="radio" name="housing-group" value="hotel">Отель
+                    <input class="visually-hidden control-input" type="radio" name="housing-group" value="hotel">
+                    <span class="control-mark"></span>
+                    <span>Мотель</span>
                   </label>
                 </li>
                 <li class="type-of-housing-item">
                   <label class="control">
-                    <input class="control-radio" type="radio" name="housing-group" value="apartments">Апартаменты
+                    <input class="visually-hidden control-input" type="radio" name="housing-group" value="apartments">
+                    <span class="control-mark"></span>
+                    <span>Апартаменты</span>
                   </label>
                 </li>
               </ul>
@@ -109,7 +121,8 @@
 <!-- range -->
 
             <div class="range">
-              <p>Стоимость, ₽:</p>
+              <div class="cost">Стоимость, ₽:</div>
+
               <div class="range-wrapper-inputs">
                 <label class="catalog-filter-label">
                    <input class="range-input" type="number" value="0" name="min-price"><span>от</span>
@@ -120,11 +133,11 @@
               </div>
 
               <div class="range-scale">
-                <div class="range-bar" style="left: 42px; width: 136px">
-                  <button class="range-toggle toggle-min">
+                <div class="range-bar" style="left: 0; width: 227px">
+                  <button type="button" class="range-toggle toggle-min">
                     <span class="visually-hidden">Изменить минимальную цену.</span>
                   </button>
-                  <button class="range-toggle toggle-max">
+                  <button type="button" class="range-toggle toggle-max">
                     <span class="visually-hidden">Изменить максимальную цену.</span>
                   </button>
                 </div>
@@ -144,7 +157,7 @@
         <!--СПИСОК ГОСТИНИЦ-->
         <section class="hotel-block">
           <div class="hotel-offers">
-            <p class="hotel-offers-quantity">Найденно гостиниц:
+            <p class="hotel-offers-quantity">Найдено гостиниц:
               <span class="hotel-quantity">38</span>
             </p>
 
@@ -208,10 +221,11 @@
                   <a class="hotel-card-title-link" href="#">Amara Resort & Spa</a>
                 </h3>
                 <span class="hotel-card-price">Гостиница</span>
-                <span class="amount">От 4000р</span>
+                <span class="amount">От 4000 ₽</span>
                 <a class="product-card-button" href="#">Подробнее</a>
                 <a class="product-card-button product-card-button-blue" href="#">В избранное</a>
                 <span class="stars">
+                  <div class="stars-block four-stars"></div>
                   <span class="visually-hidden">класс гостиницы четыре звезды</span>
                 </span>
                 <span class="rating">рейтинг: 8,5</span>
@@ -226,10 +240,11 @@
                   <a class="hotel-card-link" href="#">Villas at Poco Diablo</a>
                 </h3>
                 <span class="hotel-card-price">Гостиница</span>
-                <span class="amount">От 5000р</span>
+                <span class="amount">От 5000 ₽</span>
                 <a class="product-card-button" href="#">Подробнее</a>
                 <a class="product-card-button product-card-button-green" href="#">В избранном</a>
                 <span class="stars">
+                  <div class="stars-block four-stars"></div>
                   <span class="visually-hidden">класс гостиницы четыре звезды</span>
                 </span>
                 <span class="rating">рейтинг: 9,2</span>
@@ -244,10 +259,11 @@
                   <a class="hotel-card-link" href="#">Desert Quail Inn</a>
                 </h3>
                 <span class="hotel-card-price">Гостиница</span>
-                <span class="amount">От 2500р</span>
+                <span class="amount">От 2500 ₽</span>
                 <a class="product-card-button" href="#">Подробнее</a>
                 <a class="product-card-button product-card-button-blue" href="#">В избранное</a>
                 <span class="stars">
+                  <div class="stars-block three-stars"></div>
                   <span class="visually-hidden">класс гостиницы три звезды</span>
                 </span>
                 <span class="rating">рейтинг: 6,9</span>
@@ -262,10 +278,11 @@
                   <a class="hotel-card-link" href="#">GreenTree Inn</a>
                 </h3>
                 <span class="hotel-card-price">Гостиница</span>
-                <span class="amount">От 1500р</span>
+                <span class="amount">От 1500 ₽</span>
                 <a class="product-card-button" href="#">Подробнее</a>
                 <a class="product-card-button product-card-button-blue" href="#">В избранное</a>
                 <span class="stars">
+                  <div class="stars-block two-stars"></div>
                   <span class="visually-hidden">класс гостиницы две звезды</span>
                 </span>
                 <span class="rating">рейтинг: 5,0</span>
@@ -299,7 +316,7 @@
 
 
             <label>
-              <span class="counter-hotel">Гостиниц на сайте:</span>
+              <span class="counter-hotel">Гостиниц на странице:</span>
               <select class="counter-hotel-figure" aria-label="Сортировка">
                 <option>1</option>
                 <option>2</option>
